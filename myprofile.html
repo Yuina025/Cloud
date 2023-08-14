@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <title>自己紹介</title>
+</head>
+<body>
+    
+    <div class="image_circle">
+        <h1>myprofile</h1>
+    </div>
+    
+    
+    
+    
+
+<p class="nav-open">基本情報</p>    
+<nav>
+    <ul>
+        <p>名前：近藤ゆいな</p>
+        <p>年齢：21歳</p>
+        <p>学校：開志専門職大学</p>
+        <p>学部：情報学部</p>
+        <p>出身地：新潟県出身</p><br>
+    </ul>
+</nav>
+
+<p class="nav-hoby">趣味</p>  
+<nav>
+    <ul>
+        <p>音楽鑑賞</p>
+        <p>散歩</p>
+        <p>読書</p>
+    </ul>
+</nav>
+
+<p class="nav-music">好きな音楽</p>
+<nav>
+    <ul>
+        <p>Name:Pretty U</p>
+        <p>Artist:SEVENTEEN</p>
+        <p>Youtube:<a href="https://m.youtube.com/watch?v=ASoKZfWn5A0">Pretty U</a></p><br>
+        
+        <p>Name:Super Shy</p>
+        <p>Artist:NewJeans</p>
+        <p>Youtube:<a href="https://www.youtube.com/watch?v=ArmDp-zijuc">Super Shy</a></p><br>
+
+        <p>Name:Dangerously</p>
+        <p>Artist:Charlie Puth</p>
+        <p>Youtube:<a href="https://www.youtube.com/watch?v=TBXQu8ORnBQ">Dangerously</a></p>
+    </ul>
+</nav>
+
+<p class="nav-book">好きな本</p>
+<nav>
+    <ul>
+        <p>Name:82年生まれキム・ジヨン</p>
+        <p>Writert:チョ・ナムジュ</p>
+        <p>Amazon:<a href="https://www.amazon.co.jp/82%E5%B9%B4%E7%94%9F%E3%81%BE%E3%82%8C%E3%80%81%E3%82%AD%E3%83%A0%E3%83%BB%E3%82%B8%E3%83%A8%E3%83%B3-%E5%8D%98%E8%A1%8C%E6%9C%AC-%E3%83%81%E3%83%A7%E3%83%BB%E3%83%8A%E3%83%A0%E3%82%B8%E3%83%A5/dp/4480832114">82年生まれキム・ジヨン</a></p><br>
+
+        <p>Name:さよならも言えないうちに</p>
+        <p>Writer:川口俊和</p>
+        <p>Amazon:<a href="https://www.amazon.co.jp/%E3%81%95%E3%82%88%E3%81%AA%E3%82%89%E3%82%82%E8%A8%80%E3%81%88%E3%81%AA%E3%81%84%E3%81%86%E3%81%A1%E3%81%AB-%E5%B7%9D%E5%8F%A3%E4%BF%8A%E5%92%8C/dp/4763139371/ref=pd_lpo_sccl_2/358-7796962-3480764?pd_rd_w=I4Hei&content-id=amzn1.sym.d769922e-188a-40cc-a180-3315f856e8d6&pf_rd_p=d769922e-188a-40cc-a180-3315f856e8d6&pf_rd_r=J517DDEJ3CPJDYWCRKA0&pd_rd_wg=NPw82&pd_rd_r=3a530ad1-7e04-47b1-8e65-347ea2a02e4b&pd_rd_i=4763139371&psc=1">さよならも言えないうちに</a></p><br>
+
+        <p>Name:夢を売る百貨店　本日も完売御礼でございます</p>
+        <p>Writer:イ・ミイェ</p>
+        <p>Amazon:<a href="https://www.amazon.co.jp/%E5%A4%A2%E3%82%92%E5%A3%B2%E3%82%8B%E7%99%BE%E8%B2%A8%E5%BA%97-%E6%9C%AC%E6%97%A5%E3%82%82%E5%AE%8C%E5%A3%B2%E5%BE%A1%E7%A4%BC%E3%81%A7%E3%81%94%E3%81%96%E3%81%84%E3%81%BE%E3%81%99-%E3%82%A4%E3%83%BB%E3%83%9F%E3%82%A4%E3%82%A7/dp/4866515457/ref=sr_1_1?crid=1F5YRGT50C25Y&keywords=%E5%A4%A2%E3%82%92%E5%A3%B2%E3%82%8B%E7%99%BE%E8%B2%A8%E5%BA%97&qid=1692020313&s=books&sprefix=%E5%A4%A2%E3%82%92%E5%A3%B2%E3%82%8B%2Cstripbooks%2C218&sr=1-1">夢を売る百貨店　本日も完売御礼でございます</a></p>
+
+
+
+        
+    </ul>
+</nav>
+    
+<style>
+    nav{ display: none; }
+    .nav-open{
+        padding: 15px;
+        color: #ff93d5;
+        font-size: 20px;
+        background: #9ac1ef;
+        position: relative;
+    }
+
+    .nav-hoby{
+        padding: 15px;
+        color: #d382f8;
+        font-size: 20px;
+        background: #9ac1ef;
+        position: relative;
+    }
+
+    .nav-music{
+        padding: 15px;
+        color: #968bf9;
+        font-size: 20px;
+        background: #9ac1ef;
+        position: relative;
+    }
+
+    .nav-book{
+        padding: 15px;
+        color: #c390fc;
+        font-size: 20px;
+        background: #9ac1ef;
+        position: relative;
+    }
+
+    .nav-open::before{/* 閉じている時 */
+        content: "+";
+        position: absolute;
+        right: 20px;
+    }
+
+    .nav-hoby::before{/* 閉じている時 */
+        content: "+";
+        position: absolute;
+        right: 20px;
+    }
+
+    .nav-music::before{/* 閉じている時 */
+        content: "+";
+        position: absolute;
+        right: 20px;
+    }
+
+    .nav-book::before{/* 閉じている時 */
+        content: "+";
+        position: absolute;
+        right: 20px;
+    }
+
+
+    .nav-hoby.active::before{/* 開いている時 */
+        content: "-";
+    }
+
+    .nav-open.active::before{/* 開いている時 */
+        content: "-";
+    }
+    
+    .nav-music.active::before{/* 開いている時 */
+        content: "-";
+    }
+
+    .nav-book.active::before{/* 開いている時 */
+        content: "-";
+    }
+
+    
+    
+    
+
+body{
+    background:  linear-gradient(to right,#e8d2ff,#d3f3ff);/*/背景の色の設定/*/
+    
+    
+}
+
+div.image_circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;   /*/丸く/*/
+    background-image: url(img/IMG_7195.jpg);
+    background-position: 65% 37%;
+    margin: auto;
+
+
+    
+
+}
+
+
+
+h1{
+    text-align: center;
+    color: rgb(170, 215, 255);
+    padding: 20px 10%;
+    background-repeat:no-repeat;
+
+    
+}
+
+ul{
+    text-align: center;
+}
+
+td{
+    color: #e8d2ff;
+    font-size: 100px;
+}
+</style>
+
+<script>
+    //基本情報
+    $(function(){
+		//クリックで動く
+		$('.nav-open').click(function(){
+			$(this).toggleClass('active');
+			$(this).next('nav').slideToggle();
+		});
+		//ホバーで動く
+		$('.nav-open').hover(function(){
+			$(this).toggleClass('active');
+			$(this).next('nav').slideToggle();
+		});
+	});
+//趣味
+    $(function(){
+		//クリックで動く
+		$('.nav-hoby').click(function(){
+			$(this).toggleClass('active');
+			$(this).next('nav').slideToggle();
+		});
+		//ホバーで動く
+		$('.nav-hoby').hover(function(){
+			$(this).toggleClass('active');
+			$(this).next('nav').slideToggle();
+		});
+	});
+//好きな音楽
+    $(function(){
+		//クリックで動く
+		$('.nav-music').click(function(){
+			$(this).toggleClass('active');
+			$(this).next('nav').slideToggle();
+		});
+		//ホバーで動く
+		$('.nav-music').hover(function(){
+			$(this).toggleClass('active');
+			$(this).next('nav').slideToggle();
+		});
+	});
+//好きな本
+    $(function(){
+		//クリックで動く
+		$('.nav-book').click(function(){
+			$(this).toggleClass('active');
+			$(this).next('nav').slideToggle();
+		});
+		//ホバーで動く
+		$('.nav-book').hover(function(){
+			$(this).toggleClass('active');
+			$(this).next('nav').slideToggle();
+		});
+	});
+</script> 
+</body>
+
+</html>
