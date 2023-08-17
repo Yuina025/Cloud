@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Obniz RC Control</title>
+    <script src="https://unpkg.com/obniz@3.5.0/obniz.js"></script>
+
+</head>
+
+<body>
+    <h1>Obniz RC Control</h1>
+    <div class="container">
+
+        <!-- ③進行制御ボタン -->
+        <div class="input-group justify-content-around mb-3">
+
+            <button id="forwardButton"
+                style="background-color: rgb(0, 149, 255); color: white; font-size: larger; border-radius:5px;">前進</button>
+            <button id="backwardButton"
+                style="background-color: rgb(196, 47, 234); color: white; font-size: larger; border-radius:5px;">後進</button>
+            <button id="rightButton"
+                style="background-color: rgb(236, 193, 51); color: white; font-size: larger; border-radius:5px;">右折</button>
+            <button id="leftButton"
+                style="background-color: yellowgreen; color: white; font-size: larger; border-radius:5px;">左折</button>
+            <button id="stopButton"
+                style="background-color: rgb(224, 62, 116); color: white; font-size: larger; border-radius:5px;">停止</button>
+            <button id="playBuzzerButton"
+                style="background-color: gray; color: white; font-size: larger; border-radius:5px;">鳴らす</button>
+        </div>
+
+        <!-- ④obnizデバッグ表示 -->
+        <div id="obniz-debug"></div>
+    </div>
+    <script>
+        "use strict";
+        // obnizクラスのインスタンス化
+        const obniz = new Obniz("OBNIZ_ID_HERE");
+        const forwardButton = document.getElementById('forwardButton');
+        const backwardButton = document.getElementById('backwardButton');
+        const rightButton = document.getElementById('rightButton');
+        const leftButton = document.getElementById('leftButton');
+        const stopButton = document.getElementById('stopButton');
+        const startButton = document.getElementById('startButton');
+        const playBuzzerButton = document.getElementById('playBuzzerButton');
+
+
+        obniz.onconnect = async () => {
+            console.log('Obniz is connected');
+
+            // DCモーターの設定
+            const motor1 = obniz.wired(
+                "DCMotor",
+                {
+                    forward: 0,
+                    back: 1
+                }
+            );
+            const motor2 = obniz.wired(
+                "DCMotor",
+                {
+                    forward: 2,
+                    back: 3
+                }
+            );
+            const buzzer = obniz.wired("Keyestudio_Buzzer", { signal: 9, vcc: 10, gnd: 11 });
+
+
+            forwardButton.addEventListener('click', () => {
+                motor1.move(true);
+                motor2.move(true);
+            });
+
+            backwardButton.addEventListener('click', () => {
+                motor1.move(false);
+                motor2.move(false);
+            });
+
+            rightButton.addEventListener('click', () => {
+                motor1.move(false);
+                motor2.move(true);
+            });
+
+            leftButton.addEventListener('click', () => {
+                motor1.move(true);
+                motor2.move(false);
+            });
+
+            stopButton.addEventListener('click', () => {
+                motor1.stop();
+                motor2.stop();
+            });
+
+            playBuzzerButton.addEventListener('click', () => {
+                buzzer.play(500, 0.5);
+                setTimeout(() => {
+                    buzzer.stop();
+                }, 1000);
+            });
+        };
+
+    </script>
+</body>
+
+</html>
